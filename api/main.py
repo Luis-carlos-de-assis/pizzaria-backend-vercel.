@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 import os
 
 # --- Configuração do Banco de Dados (Supabase) ---
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:Testemanus@123@db.qhnsftvukxodyetaztxy.supabase.co:5432/postgres")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg://postgres:Testemanus@123@db.qhnsftvukxodyetaztxy.supabase.co:5432/postgres")
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
